@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 1) do
 
   create_table "bonus", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "UID", null: false
@@ -116,14 +116,16 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "fName", limit: 15, null: false
     t.string "lName", limit: 15
     t.string "Email", limit: 35, null: false
+    t.text "pass", null: false
     t.integer "pNo"
     t.date "Bdate", null: false
-    t.text "address1", null: false
+    t.text "address1"
     t.text "address2"
     t.binary "PImamge"
     t.string "town", limit: 10
     t.string "government", limit: 15
     t.boolean "active", null: false
+    t.timestamp "REgisterDate", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["Email"], name: "Email", unique: true
     t.index ["pNo"], name: "pNo", unique: true
   end

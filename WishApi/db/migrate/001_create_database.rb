@@ -1,6 +1,6 @@
-class CreateDatabase < ActiveRecord::Migration
+class CreateDatabase < ActiveRecord::Migration[5.2]
   def self.up
-    ActiveRecord::Schema.define(version: 0) do
+    ActiveRecord::Schema.define(version: 1) do
 
       create_table "bonus", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
         t.integer "UID", null: false
@@ -106,14 +106,16 @@ class CreateDatabase < ActiveRecord::Migration
         t.string "fName", limit: 15, null: false
         t.string "lName", limit: 15
         t.string "Email", limit: 35, null: false
+        t.text "pass", null: false
         t.integer "pNo"
         t.date "Bdate", null: false
-        t.text "address1", null: false
+        t.text "address1"
         t.text "address2"
         t.binary "PImamge"
         t.string "town", limit: 10
         t.string "government", limit: 15
         t.boolean "active", null: false
+        t.timestamp "REgisterDate", default: -> { "CURRENT_TIMESTAMP" }, null: false
         t.index ["Email"], name: "Email", unique: true
         t.index ["pNo"], name: "pNo", unique: true
       end
@@ -147,7 +149,7 @@ class CreateDatabase < ActiveRecord::Migration
       add_foreign_key "wishlist", "product", column: "PID", primary_key: "PID", name: "wishlist_ibfk_2", on_update: :cascade
       add_foreign_key "wishlist", "users", column: "UID", primary_key: "UID", name: "wishlist_ibfk_1", on_update: :cascade
     end
-  end
+end
 
   def self.down
     # drop all the tables if you really need
