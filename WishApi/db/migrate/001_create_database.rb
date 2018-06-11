@@ -93,7 +93,7 @@ class CreateDatabase < ActiveRecord::Migration[5.2]
         t.integer "noOfrate", null: false
       end
 
-      create_table "session", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+      create_table "sessions", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
         t.integer "UID", null: false
         t.integer "SID", null: false
       end
@@ -148,6 +148,7 @@ class CreateDatabase < ActiveRecord::Migration[5.2]
       add_foreign_key "productcat", "productcat", column: "ParentCID", primary_key: "CID", name: "productcat_ibfk_1", on_update: :cascade
       add_foreign_key "wishlist", "product", column: "PID", primary_key: "PID", name: "wishlist_ibfk_2", on_update: :cascade
       add_foreign_key "wishlist", "users", column: "UID", primary_key: "UID", name: "wishlist_ibfk_1", on_update: :cascade
+      add_foreign_key "sessions", "users", column: "UID", primary_key: "UID", name: "sessions_ibfk_1", on_update: :cascade
     end
 end
 
