@@ -60,7 +60,12 @@ public class SignUp extends AppCompatActivity {
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
-
+        _Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signUpClicked();
+            }
+        });
 
     }
     private void updateLabel() {
@@ -107,7 +112,7 @@ public class SignUp extends AppCompatActivity {
                     try {
                         String Y = new String(responseBody, "UTF-8");
                         JSONObject jsonobj = new JSONObject(Y);
-                        String msg = jsonobj.getString("Massage");
+                        String msg = jsonobj.getString("msg");
                         if(!msg.equals("Badinput")){
                             Masage(msg);
 

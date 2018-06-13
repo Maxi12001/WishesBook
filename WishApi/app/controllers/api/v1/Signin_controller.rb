@@ -4,7 +4,8 @@ module Api
       def index
         s=Session.find_by(SID: params[:SID])
         if s!=nil
-        render json:{status: 'succes',msg:'Valid Session',data: s}, status: :ok
+        x=Users.find_by(UID: s.UID)
+        render json:{status: 'succes',msg:'Valid Email and passWord',id: x.UID,sid: s.SID,name: x.fName}, status: :ok
         else
         render json:{status: 'succes',msg:'not a Valid Session'}, status: :ok
         end
@@ -15,9 +16,9 @@ module Api
         if x.pass==passrd
           sID=SecureRandom.random_number(1100000011)
           nSession=Session.create(UID: x.UID,SID: sID)
-          render json:{status: 'succes',msg:'Valid Email and passWord',data: nSession}, status: :ok
+          render json:{status: 'succes',msg:'Valid Email and passWord',id: x.UID,sid: sID,name: x.fName}, status: :ok
         else
-          render json:{status: 'succes',msg:'not a Valid mail or password'}, status: :ok
+          render json:{status: 'filed',msg:'not a Valid mail or password'}, status: :ok
         end
       end
 end
