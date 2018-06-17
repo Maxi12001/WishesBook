@@ -55,7 +55,7 @@ class CreateDatabase < ActiveRecord::Migration[5.2]
         t.index ["SID"], name: "SID"
       end
 
-      create_table "pimage", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+      create_table "pimages", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
         t.integer "PID", null: false
         t.binary "Image", null: false
         t.index ["PID"], name: "PID"
@@ -64,6 +64,7 @@ class CreateDatabase < ActiveRecord::Migration[5.2]
       create_table "product", primary_key: "PID", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
         t.integer "CatID", null: false
         t.text "DSC", null: false
+        t.decimal "price", precision: 5, scale: 2, null: false
         t.integer "inStock", default: 0, null: false
         t.index ["CatID"], name: "CatID"
       end

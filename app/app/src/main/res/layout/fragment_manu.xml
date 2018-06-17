@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="Header"
+            android:scaleType="fitXY"
+            android:src="@drawable/greens" />
+
+        <TextView
+            android:id="@+id/ImageViewText"
+            android:layout_width="292dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/ImageView"
+            android:layout_alignEnd="@id/ImageView"
+            android:layout_alignStart="@id/ImageView"
+            android:layout_alignTop="@id/ImageView"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginRight="46dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="Welcom to wishesBook"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="130dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/Friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:scaleType="fitCenter"
+        android:drawableTop="@drawable/phonebook"
+        android:text="Friends"
+        android:textSize="18sp"
+        android:background="#FFFFFF"
+        android:contentDescription="Friend" />
+
+
+            <Button
+                android:id="@+id/Wishes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:background="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:drawableTop="@drawable/wishlist"
+                android:contentDescription="MyWish List"
+                android:text="MyWishes"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/Market"
+                style="@android:style/Widget.Holo.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/shop"
+                android:scaleType="fitCenter"
+                android:text="Market"
+                android:textSize="18sp" />
+               <!-- android:src="@drawable/shop"-->
+
+
+            <Button
+                android:id="@+id/newwish"
+                style="@android:style/Widget.Holo.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:background="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:drawableTop="@drawable/plus"
+                android:contentDescription="Add new wish"
+                android:text="Add new wish"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

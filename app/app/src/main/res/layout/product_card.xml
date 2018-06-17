@@ -33,6 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:id="@+id/Title"
                     android:text="@string/Title"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
@@ -40,6 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:id="@+id/price"
                     android:text="@string/price"
                     android:textAlignment="center" />
 

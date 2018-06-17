@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/Myprofile"
+        android:title="My profile"
+
+        app:showAsAction="never"/>
+    <item android:id="@+id/EditProfile"
+        android:title="Edit porfile"
+
+        app:showAsAction="never"/>
+    <item android:id="@+id/RemindList"
+        android:title="Saved"
+
+        app:showAsAction="never"/>
+    <item android:id="@+id/Category"
+        android:title="Category"
+
+        app:showAsAction="never"/>
+    <item android:id="@+id/info"
+        android:title="about us"
+
+        app:showAsAction="never"/>
+    <item android:id="@+id/Sugest"
+        android:title="suggestion"
+
+        app:showAsAction="never"/>
+</menu>
