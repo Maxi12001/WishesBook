@@ -36,7 +36,7 @@ public class MainPage extends AppCompatActivity {
         Toolbar toolbar=(Toolbar)findViewById(R.id.apealBar);
         setSupportActionBar(toolbar);
         actionbar=getSupportActionBar();
-        actionbar.setTitle("يسر");
+        actionbar.setTitle("WishesBook");
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_list_black_24dp);
         mDrawerLayout=(DrawerLayout)findViewById(R.id.myFragment);
@@ -58,17 +58,12 @@ public class MainPage extends AppCompatActivity {
     }
     private void setupPagerAdaptor(ViewPager viewPager){
         myAdaptor=new FragmantAdaptor(getSupportFragmentManager());
-       /* Apeals feed=new Apeals();
-        Apeals Fav=new Apeals();
-        feed.setMode(0);
-        Fav.setMode(1);
-        myAdaptor.addFragmant(new CatFrag());
-        myAdaptor.addFragmant(feed);
-        myAdaptor.addFragmant(new apealDescription());
-        myAdaptor.addFragmant(Fav);
-       viewPager.setAdapter(myAdaptor);*/
+
        ManuFragment Manu= new ManuFragment();
+      // Market Market=new Market();
         myAdaptor.addFragmant(Manu);
+        //myAdaptor.addFragmant(Market);
+        viewPager.setAdapter(myAdaptor);
     }
     public void setFragment(int postion){
        if(postion==1){

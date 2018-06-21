@@ -48,51 +48,56 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
 
-    <Button
-        android:id="@+id/Friends"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:scaleType="fitCenter"
-        android:drawableTop="@drawable/phonebook"
-        android:text="Friends"
-        android:textSize="18sp"
-        android:background="#FFFFFF"
-        android:contentDescription="Friend" />
+            <Button
+                android:id="@+id/Friends"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="0dp"
+                android:background="#FFFFFF"
+                android:contentDescription="Friend"
+                android:drawableTop="@drawable/phonebook"
+                android:scaleType="fitCenter"
+                android:text="Friends"
+                android:textSize="18sp" />
 
 
             <Button
                 android:id="@+id/Wishes"
+                style="?android:attr/buttonBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
-                android:scaleType="fitCenter"
-                android:drawableTop="@drawable/wishlist"
                 android:contentDescription="MyWish List"
+                android:drawableTop="@drawable/wishlist"
+                android:scaleType="fitCenter"
                 android:text="MyWishes"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:orientation="horizontal">
 
 
@@ -101,13 +106,13 @@
                 style="@android:style/Widget.Holo.Light.ImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
                 android:background="#FFFFFF"
                 android:drawableTop="@drawable/shop"
                 android:scaleType="fitCenter"
                 android:text="Market"
                 android:textSize="18sp" />
-               <!-- android:src="@drawable/shop"-->
+            <!-- android:src="@drawable/shop"-->
 
 
             <Button
@@ -115,13 +120,13 @@
                 style="@android:style/Widget.Holo.Light.ImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
-                android:scaleType="fitCenter"
-                android:drawableTop="@drawable/plus"
                 android:contentDescription="Add new wish"
+                android:drawableTop="@drawable/plus"
+                android:scaleType="fitCenter"
                 android:text="Add new wish"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
     </LinearLayout>

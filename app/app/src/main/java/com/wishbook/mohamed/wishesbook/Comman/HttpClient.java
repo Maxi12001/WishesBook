@@ -15,7 +15,7 @@ import cz.msebera.android.httpclient.entity.StringEntity;
 
 public class HttpClient {
     private static AsyncHttpClient client =new AsyncHttpClient();
-    private static String BaseUrl="http://192.168.1.8:3000/api/v1/";
+    private static String BaseUrl="http://192.168.1.2:3000/api/v1/";
     public static void Get( final CallBackjson Responss,String apiPath){
         client.get(BaseUrl+apiPath,new JsonHttpResponseHandler(){
             @Override

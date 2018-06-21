@@ -78,7 +78,7 @@ public class SignIn extends AppCompatActivity {
                             SessionInfo.setId(id);
                             SessionInfo.setName(name);
                             SaveSession.saveCreadintiol(Sid,id,name,getApplicationContext());
-                            //openApeal();
+                            openMain();
                             }
                         else{
                             erroMasage();
@@ -102,10 +102,10 @@ public class SignIn extends AppCompatActivity {
         }
 
     }
- /*   public void openApeal(){
+    public void openMain(){
         Intent intent =new Intent(this,MainPage.class);
         startActivity(intent);
-    }*/
+    }
     public void erroMasage(){
         Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
     }

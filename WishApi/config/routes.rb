@@ -5,6 +5,7 @@ Rails.application.routes.draw do
      resources :signin
      resources :product
      resources :category
+     resources :iwish
    end
  end
 end
