@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.wishbook.mohamed.wishesbook.Entitis.SessionInfo;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +31,14 @@ Button _friends,_wishlist,_market,_newWish;
        _market.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               ((MainPage)getActivity()).setFragment(1);
+           }
+       });
+       _wishlist=view.findViewById(R.id.Wishes);
+       _wishlist.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               ((MainPage)getActivity()).setUID(SessionInfo.getId());
                ((MainPage)getActivity()).setFragment(1);
            }
        });

@@ -24,7 +24,7 @@ public class MainPage extends AppCompatActivity {
     private NavigationView navView;
     private  FragmantAdaptor myAdaptor;
     private ViewPager myViewPager;
-    private  String CatID,Catname,Aid,title,publisher,date;
+    private  String UID;
     private AlarmManager alarmMgr;
     private PendingIntent alarmIntent;
     ActionBar actionbar;
@@ -46,33 +46,27 @@ public class MainPage extends AppCompatActivity {
         setupPagerAdaptor(myViewPager);
         //setAlarm();
     }
-    public void setC_ID_name(String Id,String name){
-        CatID=Id;
-        Catname=name;
-    }
-    public void setPublisher_title_Date(String Pub,String Title,String Date,String aid){
-        Aid=aid;
-        title=Title;
-        date=Date;
-        publisher= Pub;
-    }
+
     private void setupPagerAdaptor(ViewPager viewPager){
         myAdaptor=new FragmantAdaptor(getSupportFragmentManager());
 
        ManuFragment Manu= new ManuFragment();
-      // Market Market=new Market();
+      Wishes wishes =new Wishes();
         myAdaptor.addFragmant(Manu);
-        //myAdaptor.addFragmant(Market);
+        myAdaptor.addFragmant(wishes);
         viewPager.setAdapter(myAdaptor);
     }
+    public void setUID(String ID){
+        UID =ID;
+    }
     public void setFragment(int postion){
-       if(postion==1){
+       if(postion==0){
            /*( (Apeals)  myAdaptor.getItem(postion)).setc_id_name(CatID,Catname);
            ( (Apeals)  myAdaptor.getItem(postion)).updateList();*/
        }
-       else if (postion ==2){
-         /*  ((apealDescription)myAdaptor.getItem(postion)).setPar(publisher,title,Aid,date);
-           ((apealDescription)myAdaptor.getItem(postion)).UpdateView();*/
+       else if (postion ==1){
+           ( (Wishes) myAdaptor.getItem(postion)).set_UID(UID);
+           ( (Wishes) myAdaptor.getItem(postion)).onselect();
        }
        else if(postion==3){
            //( (Apeals)  myAdaptor.getItem(postion)).updateList();
